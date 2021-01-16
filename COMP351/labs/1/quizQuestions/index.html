@@ -1,0 +1,124 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Lab 1 Quiz</title>
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+
+	<script>
+		function myFunction() {
+		  var x = document.getElementById("answerKey");
+		  if (x.style.display === "none") {
+			x.style.display = "block";
+		  } else {
+			x.style.display = "none";
+		  }
+		}
+	</script>
+  
+</head>
+
+<body>
+	
+	<p>1) What will be the content of the alert?</p>
+	<div>
+		<div>
+			<span class="keyword">let</span> firstName = <span class="keyword">null</span>;<br>
+			<span class="keyword">let</span> lastName = <span class="keyword">undefined</span>;<br>
+			<span class="keyword">let</span> nickName = <span class="string">"Supercoder"</span>;<br>
+			<br>
+			alert(firstName || lastName || nickName || <span class="string">"Anonymous"</span>);
+		</div>
+		<br>
+		<input type="radio" name="mcq" value="a" > a) null <br>
+		<input type="radio" name="mcq" value="b" > b) undefined <br>
+		<input type="radio" name="mcq" value="c" > c) Supercoder <br>
+		<input type="radio" name="mcq" value="d" > d) Anonymous <br>
+		<br>
+	</div>
+	<p>2) What will be the content of the alert?</p>
+	<div>
+		<div>
+			<span class="keyword">let</span> height = <span class="keyword">null</span>;<br>
+			<span class="keyword">let</span> width = <span class="keyword">100</span>;<br>
+
+			<span class="keyword">let</span> area = (height ?? 100) * (width ?? 50);<br>
+			<br>
+			alert(area);
+			
+		</div>
+		<br>
+		<input type="radio" name="mcq" value="a" > a) 50 <br>
+		<input type="radio" name="mcq" value="b" > b) 100<br>
+		<input type="radio" name="mcq" value="c" > c) 5000<br>
+		<input type="radio" name="mcq" value="d" > d) 10000<br>
+		<br>
+	</div>
+	<p>3) What will be the content of the alert?</p>
+	<div>
+		<div>
+			<span class="keyword">let</span> x = (1 && 2) ?? 3 ?? 4;<br>
+			<br>
+			alert(x);
+		</div>
+		<br>
+		<input type="radio" name="mcq" value="a" > a) 1<br>
+		<input type="radio" name="mcq" value="b" > b) 2<br>
+		<input type="radio" name="mcq" value="c" > c) 3<br>
+		<input type="radio" name="mcq" value="d" > d) 4<br>
+		<br>
+	</div>
+	<p>4) What will be the content of the alert?</p>
+	<div>
+		<div>
+			<span class="keyword">let</span> sum = (a, b) => a + a;<br>
+			alert( sum(1, 2) );
+		</div>
+		<br>
+	<input type="radio" name="mcq" value="a" > a) 1<br>
+	<input type="radio" name="mcq" value="b" > b) 2<br>
+	<input type="radio" name="mcq" value="c" > c) 3<br>
+	<input type="radio" name="mcq" value="d" > d) 4<br>
+	<br>
+	</div>
+	<p>5) What will be the content of the alert?</p>
+	<div>
+		<div>
+			<span class="keyword">let</span> double = n => n * 3;<br>
+			alert( double(3) );
+		</div>
+		<br>
+	<input type="radio" name="mcq" value="a" > a) 3<br>
+	<input type="radio" name="mcq" value="b" > b) 6<br>
+	<input type="radio" name="mcq" value="c" > c) 9<br>
+	<input type="radio" name="mcq" value="d" > d) 12<br>
+	<br>
+	<input type="button" value="Submit">
+	</div>
+	<p>6) What code should be inplace of the "..."?</p>
+	<div>
+		<div>
+			<span class="keyword">let</span> sum = (a, b) => { <br>
+				<span class="keyword">let</span> result = a + b; <br>
+				...<br>
+			}; <br>
+			<br>
+			alert( sum(1, 2) );
+		</div>
+		<br>
+		<input type="radio" name="mcq" value="a" > a) <span class="keyword">return</span> result;<br>
+		<input type="radio" name="mcq" value="b" > b) <span class="keyword">return</span> sum;<br>
+		<input type="radio" name="mcq" value="c" > c) sum = result;<br>
+		<input type="radio" name="mcq" value="d" > d) Leave the code as is.<br>
+		<br>
+	</div>
+	<button type="button" class="button" onClick="myFunction()">Show Answers</button>
+	
+	<div id="answerKey">
+		1) c<br> 2) d<br>3) b<br>4) b<br>5) c<br>6) a<br>
+	</div>
+	
+	<br><br><a href="../../../COMP351.html"><button type="button" class="back button">Back</button></a>
+</body>
+</html>
