@@ -9,12 +9,13 @@
 	<script>
 		function myFunction() {
 		  var x = document.getElementById("answerKey");
-		  if (x.style.display === "none") {
-			x.style.display = "block";
-		  } else {
+		  if (x.style.display === "block") {
 			x.style.display = "none";
+		  } else {
+			x.style.display = "block";
 		  }
 		}
+
 	</script>
   
 </head>
@@ -28,13 +29,13 @@
 			<span class="keyword">let</span> lastName = <span class="keyword">undefined</span>;<br>
 			<span class="keyword">let</span> nickName = <span class="string">"Supercoder"</span>;<br>
 			<br>
-			alert(firstName || lastName || nickName || <span class="string">"Anonymous"</span>);
+			alert(firstName ?? lastName ?? nickName ?? <span class="string">"Anonymous"</span>);
 		</div>
 		<br>
-		<input type="radio" name="mcq" value="a" > a) null <br>
-		<input type="radio" name="mcq" value="b" > b) undefined <br>
-		<input type="radio" name="mcq" value="c" > c) Supercoder <br>
-		<input type="radio" name="mcq" value="d" > d) Anonymous <br>
+		<input type="radio" name="1" value="a" > a) null <br>
+		<input type="radio" name="1" value="b" > b) undefined <br>
+		<input type="radio" name="1" value="c" id="correct1"> c) Supercoder <br>
+		<input type="radio" name="1" value="d" > d) Anonymous <br>
 		<br>
 	</div>
 	<p>2) What will be the content of the alert?</p>
@@ -49,10 +50,10 @@
 			
 		</div>
 		<br>
-		<input type="radio" name="mcq" value="a" > a) 50 <br>
-		<input type="radio" name="mcq" value="b" > b) 100<br>
-		<input type="radio" name="mcq" value="c" > c) 5000<br>
-		<input type="radio" name="mcq" value="d" > d) 10000<br>
+		<input type="radio" name="2" value="a" > a) 50 <br>
+		<input type="radio" name="2" value="b" > b) 100<br>
+		<input type="radio" name="2" value="c" > c) 5000<br>
+		<input type="radio" name="2" value="d" id="correct"> d) 10000<br>
 		<br>
 	</div>
 	<p>3) What will be the content of the alert?</p>
@@ -63,10 +64,10 @@
 			alert(x);
 		</div>
 		<br>
-		<input type="radio" name="mcq" value="a" > a) 1<br>
-		<input type="radio" name="mcq" value="b" > b) 2<br>
-		<input type="radio" name="mcq" value="c" > c) 3<br>
-		<input type="radio" name="mcq" value="d" > d) 4<br>
+		<input type="radio" name="3" value="a" > a) 1<br>
+		<input type="radio" name="3" value="b" id="correct"> b) 2<br>
+		<input type="radio" name="3" value="c" > c) 3<br>
+		<input type="radio" name="3" value="d" > d) 4<br>
 		<br>
 	</div>
 	<p>4) What will be the content of the alert?</p>
@@ -76,10 +77,10 @@
 			alert( sum(1, 2) );
 		</div>
 		<br>
-	<input type="radio" name="mcq" value="a" > a) 1<br>
-	<input type="radio" name="mcq" value="b" > b) 2<br>
-	<input type="radio" name="mcq" value="c" > c) 3<br>
-	<input type="radio" name="mcq" value="d" > d) 4<br>
+	<input type="radio" name="4" value="a" > a) 1<br>
+	<input type="radio" name="4" value="b" id="correct"> b) 2<br>
+	<input type="radio" name="4" value="c" > c) 3<br>
+	<input type="radio" name="4" value="d" > d) 4<br>
 	<br>
 	</div>
 	<p>5) What will be the content of the alert?</p>
@@ -89,12 +90,11 @@
 			alert( double(3) );
 		</div>
 		<br>
-	<input type="radio" name="mcq" value="a" > a) 3<br>
-	<input type="radio" name="mcq" value="b" > b) 6<br>
-	<input type="radio" name="mcq" value="c" > c) 9<br>
-	<input type="radio" name="mcq" value="d" > d) 12<br>
+	<input type="radio" name="5" value="a" > a) 3<br>
+	<input type="radio" name="5" value="b" > b) 6<br>
+	<input type="radio" name="5" value="c" id="correct"> c) 9<br>
+	<input type="radio" name="5" value="d" > d) 12<br>
 	<br>
-	<input type="button" value="Submit">
 	</div>
 	<p>6) What code should be inplace of the "..."?</p>
 	<div>
@@ -107,15 +107,15 @@
 			alert( sum(1, 2) );
 		</div>
 		<br>
-		<input type="radio" name="mcq" value="a" > a) <span class="keyword">return</span> result;<br>
-		<input type="radio" name="mcq" value="b" > b) <span class="keyword">return</span> sum;<br>
-		<input type="radio" name="mcq" value="c" > c) sum = result;<br>
-		<input type="radio" name="mcq" value="d" > d) Leave the code as is.<br>
+		<input type="radio" name="6" value="a" id="correct"> a) <span class="keyword">return</span> result;<br>
+		<input type="radio" name="6" value="b" > b) <span class="keyword">return</span> sum;<br>
+		<input type="radio" name="6" value="c" > c) sum = result;<br>
+		<input type="radio" name="6" value="d" > d) Leave the code as is.<br>
 		<br>
 	</div>
 	<button type="button" class="button" onClick="myFunction()">Show Answers</button>
 	
-	<div id="answerKey">
+	<div class="hidden" id="answerKey">
 		1) c<br> 2) d<br>3) b<br>4) b<br>5) c<br>6) a<br>
 	</div>
 	

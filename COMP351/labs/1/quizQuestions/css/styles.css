@@ -22,6 +22,6 @@
 .string {
 	color: #a31515;
 }
-#answerKey {
+.hidden {
 	display:none;
 }
